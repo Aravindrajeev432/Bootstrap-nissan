@@ -20,7 +20,10 @@ body{
     margin: 0px;
     padding: 0px;
 }
-
+a.navbar-brand{
+    font-family:verdan;
+    letter-spacing:10px;
+}
 .leftside{
     display: flex;
     flex-direction: column;
@@ -55,21 +58,53 @@ body{
     font-size: 20px;
     border: #aeaeae solid 1px;
     color: red;
-    
+    transition-duration:.4s;
+    transition-timing-function:ease;
    
 }
 
 
-.lsbutton:hover{
-    background:rgb(200, 199, 199); ;
-}
 
+@media (min-width:992px) {
+    .lsbutton h1{
+        display:none;
+        font-size:20px;
+        color:red;
+    }
+    .lsbutton:hover h1{
+    
+  
+        transition-duration:.4s;
+        transition-timing-function:cubic-bezier(0.71, 0.08, 0.91, 1.13);
+        display:block;
+    }
+    
+    
+    .lsbutton:hover{
+        transition-duration:.2s;
+        background:rgb(200, 199, 199); 
+        width:200px;
+        transform: translatex(-150px);
+    
+    }
+
+
+
+
+}
 @media (max-width:992px) {
 .lsbutton{
     width:25%;
    
 }
+.lsbutton h1{
+    display:block;
+    font-size:20px;
+        color:red;
+    }
+    
 }
+
 
 .container{
     padding:0px;
